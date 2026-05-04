@@ -1,24 +1,23 @@
 @ajouter_un_salaire
-Feature: ajouter un nouveau projet cas valide
+Feature: ajouter un salaire
 
-En tant qu utilisateur je veux cliquer sur le boutton Ajouter projet et remplire le formulaire afin d ajouter un nouveau projet
+ETQ utilisateur je veux acceder a la page liste des salaires afin d ajouter un nouveau projet
 
-Scenario: ajouter un nouveau projet cas valide
-Given je me connecte a l application erudaxis
-When je saisi l email "siouarmejri@gmail.com"
-When je saisi le password "Siwar@2026!"
-When cliquer sur le bouton connecter
-When cliquer sur categorie lycee
-When je suis sur la page d acceuil "lycee"
-When cliquer sur la rubrique Administration
-When cliquer sur la rubrique Finances
-When cliquer sur la sous rubrique charges
-When cliquer sur la sous rubrique salaires
-When cliquer sur le bouton Ajouter un salaire
-When selectionner le nom et prenom "Mejri Siwar"
-When selectionner le status "En cours"
-When saisir la Date dembauche "01072026"
-When saisir le salaire brute "3000"
-When saisir leFrais d une journee d absence "150"
-When cliquer sur le bouton ajouter
+Scenario: ajouter un salaire
+Given je me connecte sur l application erudaxis
+When je saisi un email "sekma.mohamed.hedi@gmail.com"
+And je saisi un mot de passe "Hedi@2026!"
+And je clique sur se connecter
+And je clique sur la catégorie lycee
+And cliquer sur administration
+And cliquer sur finances
+And cliquer sur charges
+And cliquer sur salaires
+And cliquer sur le bouton ajouter un salaire
+And selectionner le nom et prenom "Sekma Med Hedi"
+And selectionner le status "En cours"
+And saisir la date d embauche "01072026"
+And saisir le salaire brute "4500"
+And saisir le frais d une journee d absence "200"
+And cliquer sur le bouton ajouter
 Then un popup s affiche "Succès"

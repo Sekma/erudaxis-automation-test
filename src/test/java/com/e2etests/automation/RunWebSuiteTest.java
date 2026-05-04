@@ -21,7 +21,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 		//tags = ("@modifier_password_invalide"),
 		//tags = ("@modifier_password_verification"),
 		
-		//tags = ("@"),
+		tags = ("@ajouter_un_salaire"),
 		
 		//glue = {"com.e2etests.automation.step_definitions"},
 		monochrome = true,
