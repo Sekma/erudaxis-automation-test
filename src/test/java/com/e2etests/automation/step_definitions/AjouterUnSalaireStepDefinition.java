@@ -62,11 +62,10 @@ public class AjouterUnSalaireStepDefinition {
 	public void cliquerSurLeBoutonOk() {
 		ajouterUnSalairePage.clickOnOkSucces();
 	}
-	@Then("le salaire de {string} est dans la liste")
-	public void leSalaireDeEstDansLaListe(String name) {
+	@Then("{string} est dans la liste")
+	public void estDansLaListe(String name) {
 		Assert.assertTrue(ajouterUnSalairePage.getTableText().contains(name));
 	}
-
 
 
 

@@ -21,4 +21,4 @@ And saisir le salaire brute "4500"
 And saisir le frais d une journee d absence "200"
 And cliquer sur le bouton ajouter
 And cliquer sur le bouton ok
-Then le salaire de "Sekma Med Hedi" est dans la liste
+Then "Sekma Med Hedi" est dans la liste
