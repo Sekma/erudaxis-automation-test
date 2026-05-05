@@ -1,7 +1,10 @@
 package com.e2etests.automation.step_definitions;
 
+import org.junit.Assert;
+
 import com.e2etests.automation.page_objects.AjouterUnSalairePage;
 
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class AjouterUnSalaireStepDefinition {
@@ -55,5 +58,16 @@ public class AjouterUnSalaireStepDefinition {
 	public void cliquerSurLeBoutonAjouter() {
 		ajouterUnSalairePage.clickOnAjouterBtn();
 	}
+	@When("cliquer sur le bouton ok")
+	public void cliquerSurLeBoutonOk() {
+		ajouterUnSalairePage.clickOnOkSucces();
+	}
+	@Then("le salaire de {string} est dans la liste")
+	public void leSalaireDeEstDansLaListe(String name) {
+		Assert.assertTrue(ajouterUnSalairePage.getTableText().contains(name));
+	}
+
+
+
 
 }

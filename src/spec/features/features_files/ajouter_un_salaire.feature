@@ -20,4 +20,5 @@ And saisir la date d embauche "01072026"
 And saisir le salaire brute "4500"
 And saisir le frais d une journee d absence "200"
 And cliquer sur le bouton ajouter
-Then un popup s affiche "Succès"
+And cliquer sur le bouton ok
+Then le salaire de "Sekma Med Hedi" est dans la liste

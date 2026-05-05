@@ -50,6 +50,12 @@ public class AjouterUnSalairePage {
 	@FindBy(how = How.XPATH, using = "//button[normalize-space()='Ajouter']")
 	public WebElement ajouter_btn;
 	
+	@FindBy(how = How.XPATH, using = "/html/body/div[2]/div/div[6]/button[1]")
+	public WebElement ok_btn;
+	
+	@FindBy(how = How.XPATH, using = "(//tbody)[1]")
+	public WebElement table_salaire;
+	
 	public AjouterUnSalairePage(){
 		PageFactory.initElements(Setup.getDriver(),this);
 		this.wait = new WebDriverWait(Setup.getDriver(), Duration.ofSeconds(30));
@@ -63,13 +69,13 @@ public class AjouterUnSalairePage {
 		wait.until(ExpectedConditions.elementToBeClickable(administration_btn)).click();
 	}
 	public void clickOnFinances() {
-		finance_btn.click();
+		wait.until(ExpectedConditions.elementToBeClickable(finance_btn)).click();
 	}
 	public void clickOnCharges() {
-		charge_btn.click();
+		wait.until(ExpectedConditions.elementToBeClickable(charge_btn)).click();
 	}
 	public void clickOnSalaires() {
-		salaire_btn.click();
+		wait.until(ExpectedConditions.elementToBeClickable(salaire_btn)).click();
 	}
 	public void clickOnAjouterUnSalaire() {
 		wait.until(ExpectedConditions.elementToBeClickable(ajouter_salaire_btn)).click();
@@ -95,6 +101,12 @@ public class AjouterUnSalairePage {
 	}
 	public void clickOnAjouterBtn() {
 		ajouter_btn.click();
+	}
+	public void clickOnOkSucces() {
+		wait.until(ExpectedConditions.elementToBeClickable(ok_btn)).click();
+	}
+	public String getTableText() {
+		return wait.until(ExpectedConditions.visibilityOf(table_salaire)).getText();
 	}
 	
 }
